@@ -1,0 +1,141 @@
+/* ===========================
+   🌐 FlashX Styling - Enhanced UI
+   =========================== */
+
+/* ---------- COLOR SCHEME ---------- */
+:root {
+  --primary-start: #5b17ff;   /* Deep electric indigo */
+  --primary-end:   #763dff;   /* Soft violet transition */
+  --accent:        #00ffe1;   /* Neon cyan */
+  --accent-hover:  #00cab8;   /* Subtle teal glow */
+  
+  --bg-dark:   #0d0d0d;        /* Main background */
+  --bg-section: #181818;       /* Section backgrounds */
+  --bg-footer: #1a1a1a;        /* Footer & headers */
+  --text-light: #f4f4f4;
+
+  --radius: 8px;               /* Rounded edges */
+  --speed: 0.3s;               /* Standard transition speed */
+}
+
+/* ---------- RESET & GENERAL STYLING ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg-footer);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+  width: 140px; /* Adjust logo size */
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--speed);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- HERO SECTION (GRADIENT BACKGROUND) ---------- */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* ---------- BUTTON (Reusable Component) ---------- */
+button {
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, var(--accent), #00f8e2);
+  border: none;
+  border-radius: var(--radius);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--speed);
+  box-shadow: 0px 3px 8px rgba(0, 255, 225, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--accent-hover), #00b2a0);
+  box-shadow: 0px 4px 12px rgba(0, 255, 225, 0.5);
+}
+
+/* ---------- FEATURES & CTA SECTIONS ---------- */
+.features,
+.cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom right, var(--bg-section), var(--bg-dark));
+  border-radius: var(--radius);
+}
+
+/* Feature List */
+.features ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.features li {
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--bg-footer);
+  font-size: 0.875rem;
+}
+
+/* ---------- MEDIA QUERY (For Small Screens) ---------- */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
